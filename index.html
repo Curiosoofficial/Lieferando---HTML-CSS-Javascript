@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorstep Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="@media.css">
+    <script src="script.js"></script>
+    <script src="dishes.js"></script>
+    <script src="htmlTemplates.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="img/doorstep-logo.png">
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="icons.css">
+
+</head>
+
+<body onload="init()">
+
+    <header>
+        <div w3-include-html="templates/header.html"></div>
+    </header>
+
+    <div class="main">
+        <section class="restaurant-content">
+            <div class="restaurant-header">
+                <img class="restaurant-img" src="img/pizza.jpg" alt="Restaurant Image">
+            </div>
+            <div class="restaurant-logo"><img src="img/king-grill.png" alt="Restaurant Logo"></div>
+
+
+            <div class="restaurant">
+                <div class="restaurant-name">
+                    <h1>King Grill</h1>
+                    <div class="info-like-btn">
+                        <div class="btn btn-gray">
+                            <span class="material-symbols-outlined">
+                                info
+                            </span>
+                        </div>
+                        <div onclick="giveLike()" class="btn btn-gray">
+                            <span id="like-btn" class="material-symbols-outlined">
+                                favorite
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <img class="rate-star" src="img/icons8-stern-24.png" alt="Rating Star">
+                    <img class="rate-star" src="img/icons8-stern-24.png" alt="Rating Star">
+                    <img class="rate-star" src="img/icons8-stern-24.png" alt="Rating Star">
+                    <img class="rate-star" src="img/icons8-stern-24.png" alt="Rating Star">
+                    <img class="rate-star" src="img/icons8-halbgefüllter-stern-24.png" alt="Rating Star">
+                    <a class="review-link" href="#">Reviews</a>
+                </div>
+                <div class="delivery-container">
+                    <img src="img/icons8-uhr-24.png" alt="Clock">
+                    <div class="delivery">No delivery at the moment</div>
+                </div>
+            </div>
+
+            <div class="menu-slider-section">
+                <div class="menu-slider-container">
+                    <div class="search-btn"><img src="img/icons8-suche-50 (1).png" alt="Search"></div>
+                    <div id="menu-slider" class="menu-slider">
+                        <a href="#" class="dish-variation">Recommend Dishes</a>
+                        <a href="#doner" class="dish-variation">Döner</a>
+                        <a href="#lahmacun" class="dish-variation">Lahmacun</a>
+                        <a href="#pide" class="dish-variation">Pide</a>
+                        <a href="#burger" class="dish-variation">Burger</a>
+                        <a href="#salad" class="dish-variation">Salad</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-section">
+
+                <div id="doner" style="padding-top: 25px;">
+                    <img src="img/donerkebab.jpg" alt="Doner">
+                    <h3>Doner</h3>
+                </div>
+
+                <div id="lahmacun" style="padding-top: 25px;">
+                    <img src="img/lahmacun.jpg" alt="Lahmacun">
+                    <h3>Lahmacun</h3>
+                </div>
+
+                <div id="pide" style="padding-top: 25px;">
+                    <img src="img/pide.jpg" alt="Pide">
+                    <h3>Pide</h3>
+                </div>
+
+                <div id="burger" style="padding-top: 25px;">
+                    <img src="img/burger.jpg" alt="Burger">
+                    <h3>Burger</h3>
+                </div>
+
+                <div id="salad" style="padding-top: 25px;">
+                    <img src="img/salad.jpg" alt="Salad">
+                    <h3>Salad</h3>
+                </div>
+
+            </div>
+
+            <div onclick="openMobileBasket()" id="checkout-mobile" class="checkout-btn checkout-mobile d-none">Checkout
+            </div>
+
+        </section>
+
+        <div id="basket" class="basket"></div>
+
+    </div>
+
+    </div>
+
+    <footer>
+        <div w3-include-html="templates/footer.html"></div>
+    </footer>
+
+</body>
+
+</html>
